@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./css/plugins.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Template - gulp</title>
+    <title>Clone - Blizzard</title>
   </head>
   <body>
     <header>
@@ -61,7 +61,7 @@
 
         <div class="right-container">
           <a href="#" class="btn btn-outline">Criar conta</a>
-          <a href="#" class="btn btn-primary"
+          <a href="#" class="btn btn-primary js-open-modal"
             ><img src="./assets/icon-login.svg" alt="icon de fazer o login" />
             Logar</a
           >
@@ -820,6 +820,48 @@
         <div class="image">
           <img src="./assets/image-download-lg.png" class="img-lg" alt="" />
           <img src="./assets/image-download-sm.png" class="img-sm" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="s-modal">
+      <div class="overlay js-close-overlay"></div>
+      <div class="box">
+        <button class="close js-close">
+          <img src="./assets/close.svg" alt="" />
+        </button>
+        <img class="logo" src="./assets/battlenet.svg" alt="" />
+
+        <form action="#">
+          <div class="form-group">
+            <input type="text" placeholder="E-mail ou Telefone" />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Senha" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Conectar-se</button>
+          </div>
+        </form>
+        <div class="others-connect">
+          <p>ou conecte-se com</p>
+
+          <ul>
+            <li>
+              <button><img src="./assets/google.svg" alt="" /></button>
+            </li>
+            <li>
+              <button><img src="./assets/apple.svg" alt="" /></button>
+            </li>
+            <li>
+              <button><img src="./assets/facebook.svg" alt="" /></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="message-user">
+          <p><a href="#">Crie uma conta</a> Battle.net de graça</p>
+          <a href="#">Não consegue logar?</a>
         </div>
       </div>
     </section>

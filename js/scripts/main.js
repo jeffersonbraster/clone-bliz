@@ -36,3 +36,20 @@ allFilters.forEach((filter, index) => {
     filter.classList.add("active");
   });
 });
+
+const btnOpenModal = document.querySelector(".js-open-modal");
+const btnCloseModal = document.querySelector(".js-close");
+const overlayModal = document.querySelector(".js-close-overlay");
+
+btnOpenModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.documentElement.classList.add("show-modal");
+});
+
+function closeModal() {
+  document.documentElement.classList.toggle("show-modal");
+}
+
+btnCloseModal.addEventListener("click", closeModal);
+
+overlayModal.addEventListener("click", closeModal);
