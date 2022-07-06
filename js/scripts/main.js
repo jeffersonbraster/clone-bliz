@@ -53,3 +53,30 @@ function closeModal() {
 btnCloseModal.addEventListener("click", closeModal);
 
 overlayModal.addEventListener("click", closeModal);
+
+const btnMenu = document.querySelectorAll(".js-btn-menu");
+const menuSite = document.querySelectorAll(".js-menu");
+
+btnMenu.forEach((btn, index) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    menuSite.forEach((item) => {
+      item.classList.remove("active");
+      item.addEventListener("mouseleave", () => {
+        item.classList.remove("active");
+        btnMenu.forEach((item) => {
+          item.classList.remove("active");
+        });
+      });
+    });
+
+    btnMenu.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+
+    menuSite[index].classList.add("active");
+  });
+});
